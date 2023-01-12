@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    background-color: #faf9f9;
+    color: #1b1b1e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: .875rem;
+}
+
+/*LINKS*/
+
+a {
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: 1.2;
+    color: #004b23;
+    text-shadow: 0 0 1px #38b000;
+}
+
+a:hover,
+a:focus {
+    color: #4c956c;
+    text-shadow: 0 0 1px #38b000;
+}
+
+@keyframes rotate-icons {
+    from {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.nav-menu-links {
+    display: inline-block;
+}
+
+.nav-menu-links:hover,
+.nav-menu-links:focus {
+    animation: rotate-icons 2s linear infinite reverse;
+}
+
+/*HEADER & NAVIGATION*/
+
+.blackout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 9;
+}
+
+.header {
+    box-shadow: 0 5px 25px #ced4da;
+    padding: 1em 1em;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 6.125em;
+    height: 4.75em;
+}
+
+.mobile-menu-icon {
+    color: #5FA55A;
+    font-size: 2em;
+}
+
+.close-mobile-menu {
+    font-size: 1.5em;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    list-style: none;
+    text-align: right;
+    padding: 1.5em 1.5em 0 .5em;
+    margin: 0;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.nav-menu > li {
+    margin-bottom: 1.2em;
+}
+
+/*MAIN CONTENT*/
+
+.main-content {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*FOOTER*/
+
+.footer {
+    box-shadow: 0 -5px 25px #ced4da;
+    padding: 1em;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 700px) {
+    body {
+        font-size: 1rem;
+    }
+    a {
+        font-size: .875rem;
+    }
+    .mobile-menu-icon,
+    .close-mobile-menu {
+        display: none;
+    }
+    nav {
+        width: 100%;
+    }
+    .nav-menu {
+        display: block;
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        background-color: transparent;
+    }
+    .nav-menu > li {
+        margin-bottom: 0;
+        flex-basis: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    a {
+        font-size: 1rem;
+    }
