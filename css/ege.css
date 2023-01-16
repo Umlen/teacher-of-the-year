@@ -1,5 +1,5 @@
 .main-content-title-wrapper {
-    position: relative;
+    margin-bottom: 2em;
 }
 
 .main-content-title-img {
@@ -10,26 +10,26 @@
 }
 
 .main-content-title-text {
-    position: absolute;
-    top: 10%;
-    left: 35%;
-    margin: 0;
+    margin: 0 auto 1em;
+    text-align: center;
 }
 
 .main-content-shapes {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 2em;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5em;
 }
 
 .first-shape,
 .second-shape,
-.third-shape {
+.third-shape,
+.fourth-shape,
+.fifth-shape {
     border-radius: 20px;
-    height: 20%;
+    height: 100%;
     position: relative;
 }
 
@@ -38,14 +38,20 @@
 .second-shape:hover,
 .second-shape:focus,
 .third-shape:hover,
-.third-shape:focus {
+.third-shape:focus,
+.fourth-shape:hover,
+.fourth-shape:focus,
+.fifth-shape:hover,
+.fifth-shape:focus {
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
 }
 
 .first-shape:active,
 .second-shape:active,
-.third-shape:active {
+.third-shape:active,
+.fourth-shape:active,
+.fifth-shape:active {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
@@ -54,11 +60,18 @@
 }
 
 .second-shape {
-    background-color: rgba(250, 84, 87, .5);
+    background-color: rgba(95, 165, 90, .5);
 }
 
 .third-shape {
+    background-color: rgba(250, 84, 87, .5);
+}
+.fourth-shape {
     background-color: rgba(250, 137, 37, .5);
+}
+
+.fifth-shape {
+    background-color: rgba(80, 97, 197, .5);
 }
 
 .shape-text {
@@ -78,30 +91,36 @@
         align-items: center;
     }    
     .main-content-title-wrapper {
-        width: 40%;
+        width: 45%;
         height: auto;
-        background-position: top left;
     }
     .main-content-shapes {
-        width: 40%;
-        flex-direction: row;
-        align-content: center;
-        flex-wrap: wrap;
+        max-width: 45%;
+        height: 80%;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1em;
-    }
-    .first-shape,
-    .second-shape,
-    .third-shape {
-        height: 30%;
+        grid-template-areas:
+            "A B"
+            "A B"
+            "A C"
+            "E D";
     }
     .first-shape {
-        width: 100%;
+        grid-area: A;
     }
     .second-shape {
-        min-width: 30%;
-        flex-grow: 1;
+        grid-area: B;
     }
     .third-shape {
-        min-width: 60%;
+        grid-area: C;
+    }
+    .fourth-shape {
+        grid-area: E;
+        width: 130%;
+    }
+    .fifth-shape {
+        grid-area: D;
+        width: 70%;
+        justify-self: flex-end;
     }
 }

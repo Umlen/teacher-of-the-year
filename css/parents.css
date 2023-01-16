@@ -11,8 +11,8 @@
 
 .main-content-title-text {
     position: absolute;
-    top: 10%;
-    left: 35%;
+    top: 20%;
+    left: 25%;
     margin: 0;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .second-shape {
-    background-color: rgba(250, 84, 87, .5);
+    background-color: rgba(80, 97, 197, .5);
 }
 
 .third-shape {
@@ -83,8 +83,8 @@
         background-position: top left;
     }
     .main-content-shapes {
-        width: 40%;
-        flex-direction: row;
+        height: 80%;
+        width: 50%;
         align-content: center;
         flex-wrap: wrap;
         gap: 1em;
@@ -92,16 +92,16 @@
     .first-shape,
     .second-shape,
     .third-shape {
-        height: 30%;
+        width: 35%;
     }
     .first-shape {
-        width: 100%;
-    }
-    .second-shape {
-        min-width: 30%;
+        min-height: 30%;
         flex-grow: 1;
     }
+    .second-shape {
+        min-height: 60%;
+    }
     .third-shape {
-        min-width: 60%;
+        height: 100%;
     }
 }

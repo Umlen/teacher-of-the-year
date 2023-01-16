@@ -119,6 +119,7 @@ a:focus {
 .nav-curent-page {
     text-decoration: underline;
     font-weight: 700;
+    margin: 0;
 }
 
 /*MAIN CONTENT*/
