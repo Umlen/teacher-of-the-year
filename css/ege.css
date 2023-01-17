@@ -92,7 +92,10 @@
     }    
     .main-content-title-wrapper {
         width: 45%;
-        height: auto;
+    }
+    .main-content-title-img {
+       height: auto;
+       max-height: 300px;
     }
     .main-content-shapes {
         max-width: 45%;

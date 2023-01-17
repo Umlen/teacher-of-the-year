@@ -142,6 +142,16 @@ a:focus {
 
 .main-page-info {
     padding-left: 1em;
+    margin-bottom: 2em;
+}
+
+.main-page-info > p {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+.main-page-info > h3 {
+    margin-bottom: .5em;
 }
 
 /*FOOTER*/
