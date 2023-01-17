@@ -23,6 +23,13 @@
     gap: .5em;
 }
 
+.shapes-links,
+.shapes-links:hover,
+.shapes-links:focus {
+    color: #000000;
+    text-shadow: unset;
+}
+
 .first-shape,
 .second-shape,
 .third-shape,
